@@ -3,9 +3,14 @@ class PostsController < ApplicationController
   
   # GET /posts
   # GET /posts.xml
-  def index
-    @posts = Post.find(:all)
+  def index 
+    if params[:user_id]
+      @posts = User.find(params[:user_id]).posts
+    else
+      @posts = Post.find(:all)
+    end
 
+    puts "%%% User id: #{params[:user_id]}"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

@@ -1,12 +1,14 @@
-<% form_for(Post.new) do |f| %>
-  <%= f.error_messages %>
+<% if (current_user) %>
+  <% form_for(Post.new) do |f| %>
+    <%= f.error_messages %>
 
-  <p>
-    <%= f.text_area :body, :cols => 20, :rows => 4 %>
-  </p>
-  <p>
-    <%= f.submit "Update Status" %>
-  </p>
+    <p>
+      <%= f.text_area :body, :cols => 20, :rows => 4 %>
+    </p>
+    <p>
+      <%= f.submit "Update Status" %>
+    </p>
+  <% end %>
 <% end %>
 <hr>
 <div class="posts">
