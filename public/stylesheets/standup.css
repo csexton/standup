@@ -1,0 +1,38 @@
+
+.footer {
+  font-size: 0.5em;
+  color: green;
+
+}
+/* Post styles */
+.posts { 
+}
+.post_row {
+  border-bottom:1px dotted green;
+}
+.post_user {}
+.post_body {}
+.post_edit {}
+.post_delete {}
+
+textarea#post_body
+{
+  height: 2.5em;
+  width: 508px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-family: 'Lucida Grande',sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 1.15em;
+  line-height: 1.1;
+  font-size-adjust: none;
+  font-stretch: normal;
+  -x-system-font: none;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+

@@ -1,0 +1,23 @@
+<% form_for(Post.new) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.text_area :body, :cols => 20, :rows => 4 %>
+  </p>
+  <p>
+    <%= f.submit "Update Status" %>
+  </p>
+<% end %>
+<hr>
+<div class="posts">
+<% for post in @posts %>
+  <div class="post_row">
+    <div class="post_user"><%=h post.user.login %></div>
+    <div class="post_body"><%=h post.body %></div>
+    <div class="post_edit"><%= link_to 'Edit', edit_post_path(post) %></div>
+    <div class="post_delete"><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></div>
+  </div>
+<% end %>
+</div>
+
+<%= link_to 'New post', new_post_path %>
