@@ -6,14 +6,34 @@
 }
 /* Post styles */
 .posts { 
+  clear: both;
 }
 .post_row {
-  border-bottom:1px dotted green;
+  border-bottom:1px dashed green;
+  clear: both;
+  margin-top: 0.2em;
+  margin-bottom: 1.2em;
 }
-.post_user {}
-.post_body {}
-.post_edit {}
-.post_delete {}
+.post_user {
+float: left;
+background-image: url('../images/icon/balloon.png');
+background-position: top left;
+background-repeat: no-repeat;
+padding-left: 16px;
+padding-top: 10px;
+}
+.post_body {
+float: left;
+font-size: 1.6em;
+padding-left: 0.2em;
+padding-top: 0.2em;
+}
+.post_edit {
+float: right;
+}
+.post_delete {
+float: right;
+}
 
 textarea#post_body
 {

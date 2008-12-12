@@ -6,7 +6,7 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Standup<title>
   <%= stylesheet_link_tag 'screen' %>
-  <%= stylesheet_link_tag 'print' %>
+  <%= stylesheet_link_tag 'print', :media => "print" %>
   <!--[if lte IE 7]>
   <link href="/stylesheets/hacks-ie.css" rel="stylesheet" type="text/css" media="screen" />
   <![endif]-->
@@ -20,22 +20,7 @@
 	<div class="container">  
 		<h1>A simple sample page</h1>
 		
-		<div class="span-7 colborder">
-		  <h6>Here's a box</h6>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-		</div>
-
-		<div class="span-8 colborder">
-		  <h6>And another box</h6>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat laboris nisi ut aliquip.</p>
-		</div>
-		
-		<div class="span-7 last">
-		  <h6>This box is aligned with the sidebar</h6>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-		</div>
 		<hr>
-		<hr class="space">
 
 		<div class="span-15 prepend-1 colborder">
               <p style="color: green"><%= flash[:notice] %></p>
@@ -51,6 +36,14 @@
 			<div class="span-7 last">
 			  <h6>This is another nested column</h6>
 			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<hr>
+			<div class="span-14 colborder">
+			  <h6>This is a nested column</h6>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<div class="span-1 last">
+              <p>Lorem ipsum</p>
 			</div>
 			
 		</div>
