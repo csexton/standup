@@ -14,10 +14,14 @@
 <div class="posts">
 <% for post in @posts %>
   <div class="post_row">
-    <div class="post_user"><%=h post.user.login %></div>
-    <div class="post_body"><%=h post.body %></div>
-    <div class="post_edit"><%= link_to '<img src="/images/icon/receipt_pencil.png" />', edit_post_path(post) %></div>
-    <div class="post_delete"><%= link_to '<img src="/images/icon/receipt_minus.png" />', post, :confirm => 'Are you sure?', :method => :delete %></div>
+    <div class="post_avatar">
+      <%= image_tag gravatar_url_for(post.user.email), :height => 80, :width => 80, :title => "#{post.user.login}'s Avatar"%>
+    </div>
+    <div class="post_body"><span class="post_user"><%= link_to h(post.user.login), user_path(post.user)  %></span> <%=h post.body %></div>
+    <div class="post_edit">
+      <%= link_to '<img src="/images/icon/receipt_pencil.png" />', edit_post_path(post) %>
+      <%= link_to '<img src="/images/icon/receipt_minus.png" />', post, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
   </div>
 <% end %>
 </div>
