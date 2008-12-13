@@ -32,6 +32,12 @@
 			
 			<h3><span class="alt">Standup</span> microblog</h3>
 
+            <% if current_user %>
+
+              <%= image_tag gravatar_url_for(current_user.email, :size => 40), :height => 40, :width => 40, :title => "#{current_user.login}'s Avatar"%>
+
+            <% end %>
+
             <%=render :partial => 'users/user_bar' %>		
 
             <br />
