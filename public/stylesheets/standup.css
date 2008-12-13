@@ -13,9 +13,10 @@
   float: left;
 }
 .post_row {
-  border-bottom:1px dashed green;
+  border-bottom:1px dashed #ccc;
   clear: both;
   padding-bottom: 0.2em;
+  padding-top: 0.2em;
   width: 590px;
   height: 80px;
 }
