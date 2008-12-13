@@ -1,7 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  body: MyString
+  body: This is post one by quentin
+  user: quentin
 
 two:
-  body: MyString
+  body: This is post two by aaron
+  user: aaron

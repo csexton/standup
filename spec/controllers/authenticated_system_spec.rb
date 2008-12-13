@@ -1,8 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-# Be sure to include AuthenticatedTestHelper in spec/spec_helper.rb instead
-# Then, you can remove it from this and the units test.
-include AuthenticatedTestHelper
 include AuthenticatedSystem
 def action_name() end
 
@@ -29,9 +26,9 @@ describe SessionsController do
     it 'forgets me' do    
       current_user.remember_me
       current_user.remember_token.should_not be_nil; current_user.remember_token_expires_at.should_not be_nil
-      User.find(1).remember_token.should_not be_nil; User.find(1).remember_token_expires_at.should_not be_nil
+      User.find(Fixtures.identify(:quentin)).remember_token.should_not be_nil; User.find(Fixtures.identify(:quentin)).remember_token_expires_at.should_not be_nil
       logout_killing_session!
-      User.find(1).remember_token.should     be_nil; User.find(1).remember_token_expires_at.should     be_nil
+      User.find(Fixtures.identify(:quentin)).remember_token.should     be_nil; User.find(Fixtures.identify(:quentin)).remember_token_expires_at.should     be_nil
     end
   end
 
@@ -51,9 +48,9 @@ describe SessionsController do
     it 'forgets me' do    
       current_user.remember_me
       current_user.remember_token.should_not be_nil; current_user.remember_token_expires_at.should_not be_nil
-      User.find(1).remember_token.should_not be_nil; User.find(1).remember_token_expires_at.should_not be_nil
+      User.find(Fixtures.identify(:quentin)).remember_token.should_not be_nil; User.find(Fixtures.identify(:quentin)).remember_token_expires_at.should_not be_nil
       logout_keeping_session!
-      User.find(1).remember_token.should     be_nil; User.find(1).remember_token_expires_at.should     be_nil
+      User.find(Fixtures.identify(:quentin)).remember_token.should     be_nil; User.find(Fixtures.identify(:quentin)).remember_token_expires_at.should     be_nil
     end
   end
   
