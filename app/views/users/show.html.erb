@@ -1,0 +1,13 @@
+<h2>Viewing user <%= h @user.login %></h2>
+<ul>
+  <li>
+  Login: <%= h @user.login%>
+  </li>
+  <li>
+  Email: <%= h @user.email %>
+  </li>
+  <li>
+  Avatar: <a href="http://en.gravatar.com/site/signup/"><%= image_tag gravatar_url_for(@user.email), :height => 80, :width => 80, :title => "#{@user.login}'s Avatar"%></a>
+  </li>
+  <p>Sign up for a <a href="http://www.gravatar.com">gravatar</a>.<p>
+</ul>
