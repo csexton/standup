@@ -11,8 +11,7 @@ describe SubscriptionsController do
     post :create, @login_params
   end
   describe "Create new subscription," do
-
-    it "Relate quentin to aaron" do
+    it "Subscribe quentin to aaron" do
       true.should be_true
     end
   end
