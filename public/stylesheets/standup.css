@@ -1,6 +1,6 @@
 /* Global Styles */
 .footer {
-  font-size: 0.5em;
+  font-size: 0.8em;
   color: green;
 }
 /* Post Styles */
@@ -8,24 +8,25 @@
   clear: both;
 }
 .post_avatar {
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
   float: left;
 }
 .post_row {
   border-bottom:1px dashed #ccc;
   clear: both;
-  padding-bottom: 0.2em;
   padding-top: 0.2em;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
   width: 590px;
-  height: 80px;
 }
 .post_user {
 }
 .post_body {
   float: left;
-  font-size: 1.6em;
-  padding-left: 18px;
+  font-size: 1.2em;
+  padding-left: 0.2em;
   padding-top: 0.2em;
   width: 390px;
 }
