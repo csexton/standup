@@ -1,4 +1,5 @@
 class SubscriptionsController < ApplicationController
+  before_filter :login_required, :except => :index
   # GET /subscriptions
   # GET /subscriptions.xml
   def index
@@ -25,6 +26,7 @@ class SubscriptionsController < ApplicationController
   # GET /subscriptions/new.xml
   def new
     @subscription = Subscription.new
+    @users = User.find(:all) 
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,11 +43,13 @@ class SubscriptionsController < ApplicationController
   # POST /subscriptions.xml
   def create
     @subscription = Subscription.new(params[:subscription])
+    @subscription.user = current_user
+    @subscription.sub_id = params[:sub][:user_id]
 
     respond_to do |format|
       if @subscription.save
         flash[:notice] = 'Subscription was successfully created.'
-        format.html { redirect_to(@subscription) }
+        format.html { redirect_to(:action => 'index') }
         format.xml  { render :xml => @subscription, :status => :created, :location => @subscription }
       else
         format.html { render :action => "new" }

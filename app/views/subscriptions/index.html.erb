@@ -1,18 +1,17 @@
 <h1>Listing subscriptions</h1>
 
-<table>
-  <tr>
-  </tr>
 
-<% for subscription in @subscriptions %>
-  <tr>
-    <td><%= link_to 'Show', subscription %></td>
-    <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
-    <td><%= link_to 'Destroy', subscription, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<ul>
+  <% for subscription in @subscriptions %>
+    <li>
+    <%= h subscription.user.login %> is following 
+    <%= h User.find_by_id(subscription.sub_id).login %>
+    <%= link_to 'Edit', edit_subscription_path(subscription) %>
+    <%= link_to 'Destroy', subscription, :confirm => 'Are you sure?', :method => :delete %>
+    </li>
+  <% end %>
 
+</ul>
 <br />
 
 <%= link_to 'New subscription', new_subscription_path %>

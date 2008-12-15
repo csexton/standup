@@ -3,6 +3,7 @@
 <% form_for(@subscription) do |f| %>
   <%= f.error_messages %>
 
+  <%= select(:sub, :user_id, @users.collect {|e| [e.login, e.id]})%>
   <p>
     <%= f.submit "Create" %>
   </p>

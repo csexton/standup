@@ -1,8 +1,10 @@
 <div class="span-7 colborder">
   <h6>User Details</h6>
   <p>
-
   <ul>
+    <li>
+    Subscribe to <%= h @user.login%>
+    </li>
     <li>
     Login: <%= h @user.login%>
     </li>
@@ -22,3 +24,6 @@
   Sign up for a <a href="http://www.gravatar.com">gravatar</a>.
   </p>
 </div>
+
+
+<%= render :partial => 'posts/list_posts', :locals => { :posts => @user.posts } %>
