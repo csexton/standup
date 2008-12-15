@@ -12,3 +12,5 @@
   <hr>
 <% end %>
 <%= render :partial => 'list_posts', :locals => { :posts => @posts } %>
+<hr />
+<%= will_paginate @posts %>

@@ -7,7 +7,8 @@ class PostsController < ApplicationController
     if params[:user_id]
       @posts = User.find(params[:user_id]).posts
     else
-      @posts = Post.find(:all)
+      #@posts = Post.find(:all)
+      @posts = Post.paginate :page => params[:page], :order => 'created_at DESC'
     end
 
     puts "%%% User id: #{params[:user_id]}"
