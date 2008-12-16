@@ -35,9 +35,10 @@ set :deploy_via, :remote_cache
 #############################################################
 #	Passenger
 #############################################################
+after "deploy:update_code", "db:symlink" 
 
-namespace :deploy do
   
+namespace :deploy do
   # Restart passenger on deploy
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do
@@ -48,13 +49,13 @@ namespace :deploy do
     desc "#{t} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
   end
+end
 
-  #desc "After symlinking current version, symlink to the production sqlite DB"
-  #task :after_update_code do 
-  #  # Link it from the shared folder. 
-  #  run "ln -s #{deploy_to}/#{shared_dir}/db/production.sqlite3 #{current_release}/db/production.sqlite3" 
-  #end 
-
+namespace :db do
+ desc "Make symlink for database yaml" 
+  task :symlink do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml" 
+  end
 end
 
 #set :stages, %w(staging production)
