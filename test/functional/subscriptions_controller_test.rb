@@ -23,26 +23,26 @@ class SubscriptionsControllerTest < ActionController::TestCase
   end
 
   test "should show subscription" do
-    get :show, :id => subscriptions(:one).id
+    get :show, :id => subscriptions(:quentin_follows_aaron).id
     assert_response :success
   end
 
   test "should get edit" do
     login_as :quentin
-    get :edit, :id => subscriptions(:one).id
+    get :edit, :id => subscriptions(:quentin_follows_aaron).id
     assert_response :success
   end
 
   test "should update subscription" do
     login_as :quentin
-    put :update, :id => subscriptions(:one).id, :subscription => { }
+    put :update, :id => subscriptions(:quentin_follows_aaron).id, :subscription => { }
     assert_redirected_to subscription_path(assigns(:subscription))
   end
 
   test "should destroy subscription" do
     login_as :quentin
     assert_difference('Subscription.count', -1) do
-      delete :destroy, :id => subscriptions(:one).id
+      delete :destroy, :id => subscriptions(:quentin_follows_aaron).id
     end
 
     assert_redirected_to subscriptions_path
