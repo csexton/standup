@@ -1,0 +1,85 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: quentin
+  body: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight."
+
+two:
+  user: aaron
+  body: "Simplicity carried to the extreme becomes elegance."
+
+three:
+  user: aaron 
+  body: "And the users exclaimed with a laugh and a taunt: It's just what we asked for but not what we want."
+  
+four:
+  user: quentin
+  body: "If the lessons of history teach us anything it is that nobody learns the lessons that history teaches us."
+  
+five:
+  user: quentin
+  body: "Real computer scientists despise the idea of actual hardware. Hardware has limitations, software doesn't. It's a real shame that Turing machines are so poor at I/O."
+  
+six:
+  user: quentin
+  body: "The Six Phases of a Project: Enthusiasm. Disillusionment. Panic. Search for the Guilty. Punishment of the Innocent. Praise for non-participants."
+  
+seven:
+  user: quentin
+  body: "There's a fine line between being on the leading edge and being in the lunatic fringe."
+  
+eight:
+  user: quentin
+  body: "Plan to throw one away, you will anyhow."
+  
+nine:
+  user: quentin
+  body: "The first 90% of the code accounts for the first 90% of the development time. The remaining 10% of the code accounts for the other 90% of the development time."
+  
+ten:
+  user: quentin
+  body: "The behavior of any bureaucratic organization can best be understood by assuming that it is controlled by a secret cabal of its enemies."
+  
+eleven:
+  user: quentin
+  body: "Learning is not compulsory. Neither is survival."
+  
+twelve:
+  user: quentin
+  body: "The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague."
+  
+thirteen:
+  user: quentin
+  body: "Simplicity is prerequisite for reliability"
+  
+fourteen:
+  user: quentin
+  body: "Never attribute to malice that which is adequately explained by stupidity."
+  
+fithteen:
+  user: quentin
+  body: "Do not worry about your difficulties in mathematics. I can assure you that mine are still greater."
+  
+sixteen:
+  user: quentin
+  body: "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else."
+  
+seventeen:
+  user: quentin
+  body: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
+  
+eightteen:
+  user: quentin
+  body: "I have always found that plans are useless, but planning is indispensable."
+  
+ninteen:
+  user: quentin
+  body: "It's not at all important to get it right the first time. It's vitally important to get it right the last time."
+  
+twenty:
+  user: quentin
+  body: "Perl is another example of filling a tiny, short-term need, and then being a real problem in the longer term."
+
+twentyone:
+  user: quentin
+  body: "Let us change our traditional attitude to the construction of programs. Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do."
