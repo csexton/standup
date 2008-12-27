@@ -11,7 +11,6 @@ class PostsController < ApplicationController
       @posts = Post.paginate :page => params[:page], :order => 'created_at DESC'
     end
 
-    puts "%%% User id: #{params[:user_id]}"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
