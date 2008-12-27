@@ -8,11 +8,13 @@ class SubscriptionsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    login_as :quentin
     get :new
-    assert_response :success
+    assert_redirected_to subscription_path(assigns(:subscription))
   end
 
   test "should create subscription" do
+    login_as :quentin
     assert_difference('Subscription.count') do
       post :create, :subscription => { }
     end
@@ -26,16 +28,19 @@ class SubscriptionsControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
+    login_as :quentin
     get :edit, :id => subscriptions(:one).id
     assert_response :success
   end
 
   test "should update subscription" do
+    login_as :quentin
     put :update, :id => subscriptions(:one).id, :subscription => { }
     assert_redirected_to subscription_path(assigns(:subscription))
   end
 
   test "should destroy subscription" do
+    login_as :quentin
     assert_difference('Subscription.count', -1) do
       delete :destroy, :id => subscriptions(:one).id
     end
