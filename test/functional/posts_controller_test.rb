@@ -23,7 +23,7 @@ class PostsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to post_path(assigns(:post))
+    assert_redirected_to posts_path
   end
 
   test "should show post" do
@@ -40,7 +40,7 @@ class PostsControllerTest < ActionController::TestCase
   test "should update post" do
     login_as :quentin
     put :update, :id => posts(:one).id, :post => { :body => "Updated body" }
-    assert_redirected_to post_path(assigns(:post))
+    assert_redirected_to posts_path
   end
 
   test "should destroy post" do
