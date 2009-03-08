@@ -1,0 +1,4 @@
+$("#posts").prepend( "<%= escape_javascript(render :partial => 'post_row', :locals => { :post => @post }) %>");
+$("#new_post")[0].reset();
+$("#post_<%=@post.id%>").highlight(1000);
+
